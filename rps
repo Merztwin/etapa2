@@ -1,0 +1,68 @@
+//LINK DO DESAFIO: https://edabit.com/challenge/MYqnQ3DpPZi9di4iW
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+
+//Reconheço que se trata de mal hábito em uma
+//aplicação profissional, mas para um programa
+//de um arquivo imagino ser ok
+using namespace std;
+
+void rps(string player1, string player2)
+{
+    
+    if(player1=="rock"&&player2=="rock")
+    {
+        cout << "TIE \n";
+    }
+    else if(player1=="rock"&&player2=="paper")
+    {
+        cout << "Player 2 wins \n";
+    }
+    else if(player1=="rock"&&player2=="scissors")
+    {
+        cout << "Player 1 wins \n";
+    }
+    else if(player1=="paper"&&player2=="rock")
+    {
+        cout << "Player 1 wins \n";
+    }
+    else if(player1=="paper"&&player2=="paper")
+    {
+        cout << "TIE \n";
+    }
+    else if(player1=="paper"&&player2=="scissors")
+    {
+        cout << "Player 2 wins \n";
+    }
+    else if(player1=="scissors"&&player2=="rock")
+    {
+        cout << "Player 2 wins \n";
+    }
+    else if(player1=="scissors"&&player2=="paper")
+    {
+        cout << "Player 1 wins \n";
+    }
+    else if(player1=="scissors"&&player2=="scissors")
+    {
+        cout << "TIE \n";
+    }
+    else
+        cout << "ERRO \n";
+}
+
+int main()
+{
+    cout << "Por favor forneça o input do jogador 1: \n";
+    string player1input;
+    cin >> player1input;
+
+    cout << "Por favor forneça o input do jogador 2: \n";
+    string player2input;
+    cin >> player2input;
+
+    system("clear");
+
+    rps(player1input,player2input);
+    return EXIT_SUCCESS;
+}

@@ -1,0 +1,39 @@
+//LINK DO DESAFIO: https://edabit.com/challenge/nasKYub6qEAfQcFuy
+#include <iostream>
+#include <cstdio>
+#include <cmath>
+
+
+//Reconheço que se trata de mal hábito em uma
+//aplicação profissional, mas para um programa
+//de um arquivo imagino ser ok
+using namespace std;
+
+
+float quadraticEquation(float a, float b, float c)
+{
+    float result, aux;
+    aux = (b*b)-4*(a*c);
+
+    result = (sqrt(aux)-b)/(2*a);
+
+    return result;
+}
+
+int main()
+{
+    float a , b, c, x;
+    cout << "Por favor forneça o valor de grau 2:  \n";
+    cin >> a;
+
+    cout << "Por favor forneça o valor de grau 1:  \n";
+    cin >> b;
+
+    cout << "Por favor forneça o valor de grau 0:  \n";
+    cin >> c;
+
+
+    x = quadraticEquation(a, b, c);
+    cout << x << endl;
+    return EXIT_SUCCESS;
+}

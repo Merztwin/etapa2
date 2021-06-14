@@ -1,0 +1,34 @@
+//LINK DO DESAFIO: https://edabit.com/challenge/nFzipHDLBZTWpekQW
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+
+//Reconheço que se trata de mal hábito em uma
+//aplicação profissional, mas para um programa
+//de um arquivo imagino ser ok
+using namespace std;
+
+string reverseCase(string myInput)
+{
+    string myResult = myInput;
+
+    for(int i=0;i<myInput.length();i++)
+    {
+        if(islower(myInput[i]))
+            myResult[i] = toupper(myInput[i]);
+        else if(isupper(myInput[i]))
+            myResult[i] = tolower(myInput[i]);
+    }
+    return myResult;
+}
+
+int main()
+{
+    cout << "Por favor forneça um input: \n \n";
+    string myInput;
+    cin >> myInput;
+
+    myInput = reverseCase(myInput);
+    cout << myInput << endl;
+    return EXIT_SUCCESS;
+}

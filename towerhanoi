@@ -1,0 +1,28 @@
+//LINK DO DESAFIO: https://edabit.com/challenge/hjmadKkCtejKpvpc6
+#include <iostream>
+#include <cmath>
+#include <cstdio>
+
+
+//Reconheço que se trata de mal hábito em uma
+//aplicação profissional, mas para um programa
+//de um arquivo imagino ser ok
+using namespace std;
+
+int towerHanoi(int discos)
+{
+    int myResult = pow(2,discos)-1;
+    return myResult;
+}
+
+int main()
+{
+    cout << "Por favor forneça o número de discos:  \n";
+    int discos;
+    int resultado;
+    cin >> discos;
+
+    resultado = towerHanoi(discos);
+    cout << resultado << endl;
+    return EXIT_SUCCESS;
+}

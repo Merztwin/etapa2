@@ -1,0 +1,30 @@
+//LINK DO DESAFIO: https://edabit.com/challenge/ZhEBoaEfMcK6vT7Kx
+#include <iostream>
+#include <cstdio>
+#include <cctype>
+
+bool isValidHexCode(std::string hexCode)
+{
+    if(hexCode[0]!='#'||hexCode.length()!=7)
+        return false;
+    else
+        for(int i=1;i<hexCode.length();i++)
+        {
+            if(!isalnum(hexCode[i]))
+                return false;
+        }
+    return true;
+}
+
+int main()
+{
+    std::cout << "Por favor forneça um possível hexcode para checagem: \n \n";
+    std::string myInput;
+    std::cin >> myInput;
+
+    if(isValidHexCode(myInput))
+        std::cout << "Sim, se trata de um hexcode válido \n";
+    else
+        std::cout << "Não, este não é um hexcode válido \n"; 
+    return EXIT_SUCCESS;
+}
